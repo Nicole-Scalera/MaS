@@ -184,14 +184,15 @@ In the upper-left corner, right beneath the repository name, you can find the ch
 
 Sometimes it's best to pull from the repository before you push anything into it, which can be done by clicking the "Fetch Origin" button.
 
-<img src="02 Documentation\00 Assets\README\ghd_interface.png" width="700"></img>
-
-
-
-
-
+<img src="02 Documentation\00 Assets\README\fetch_origin.png" width="700"></img>
 
 Like the last method, you will be prompted to create a <a href="#title-and-description">title and description</a> for your commit.
+
+If you are confident on these edits, and are ready to push them to the main branch of the repository, you can click "Push Origin."
+
+<img src="02 Documentation\00 Assets\README\push_origin.png" width="700"></img>
+
+This command will sync your local and remote copies together.
 
 <br></br>
 
