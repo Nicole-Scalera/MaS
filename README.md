@@ -22,13 +22,19 @@
   <summary>Table of Contents</summary>
   <ol>
     <li><a href="#credits">Credits</a></li>
-    <li><a href="#usage">Usage</a></li>
+    <li><a href="#overview">Overview</a></li>
       <ol type="i">
-        <li><a href="#overview">Overview</a></li>
-        <ol type="i">
-          <li><a href="#what-is-a-repository">What Is a Repository?</a></li>
-          <li><a href="#how-will-the-repository-be-used">How Will the Repository Be Used?</a></li>
-        </ol>
+        <li><a href="#there-is-a-lot-of-text-here-where-do-i-start">There is a LOT of Text Here... Where Do I Start?</a></li>
+      </ol>
+    <li><a href="#navigation">Navigation</a></li>
+      <ol type="i">
+        <li><a href="#unfamiliar-with-github">Unfamiliar With GitHub</a></li>
+        <li><a href="#familiar-with-github">Familiar With GitHub</a></li>
+      </ol>
+    <li><a href="#repositories">Repositories</a></li>
+      <ol>
+        <li><a href="#what-is-a-repository">What Is a Repository?</a></li>
+        <li><a href="#how-will-the-repository-be-used">How Will the Repository Be Used?</a></li>
       </ol>
     <li><a href="#committing">Committing</a></li>
       <ol type="i">
@@ -65,6 +71,8 @@
 </details>
 </div>
 
+<br></br>
+
 <!-- CREDITS -->
 ## Credits
 
@@ -80,8 +88,126 @@ Epic Epic Games is...
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-<!-- USAGE -->
-## Usage
+<!-- OVERVIEW -->
+<div id="overview" style="font-size:16px;">
+<h2>Overview</h2>
+
+<p style="font-size:16px;">Hello everyone! For easy reading, I've broken the rules up into bite-sized sections.
+
+### There is a LOT of Text Here... Where Do I Start?
+You may be asking yourself, *where should I even start?* Fear not! I've put together a table below that will help you <a href="#navigation">navigate</a> this README.
+
+</div>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<br></br>
+
+<!-- NAVIGATIONAL WIREFRAME -->
+<div id="navigation" style="font-size:16px;">
+
+<h2>Navigation</h3>
+
+Take a look at the following questions to navigate this README. Each choice will tailor your reading experience.
+
+<div style="font-size:16px;">
+  <ol>
+    <li>
+      <strong>Are you familiar with GitHub?</strong>
+      <br>
+      <a href="#unfamiliar-with-github" style="margin-left:12px;">No, I need an introduction</a> |
+      <a href="#familiar-with-github">Yes, I am very/pretty familiar</a>
+    </li>
+  </ol>
+  <p></p> 
+  <p>
+
+  </p>
+
+</div>
+
+</div>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<br></br>
+
+
+<!-- UNFAMILIAR WITH GITHUB -->
+<div id="unfamiliar-with-github" style="font-size:16px;">
+  <h2>Unfamiliar With Github</h2>
+  <p>No problem! I am happy to help out. Here are the sections I would recommend you read:</p>
+  <ol>
+    <li><a href="#repositories">Repositories</a></li>
+    <ul>
+      <li>This section covers the basics of this repository and how to interact with it.</li>
+    </ul>
+    <li><a href="#committing">Committing</a></li>
+    <li><a href="#remote-vs-local">Remote vs. Local</a></li>
+    <li><a href="#uploading-things--making-changes">Uploading Things & Making Changes</a></li>
+    <ul>
+      <li>You will most likely be uploading <a href="#i-want-to-upload-files-through-my-browser-remote">remotely</a>, especially if you are a Writer, Artist, or Designer.</li>
+      <li>However, you can also upload things <a href="#i-want-to-upload-files-from-my-computer-local">locally</a>, but remote is easier if you're a beginner.</li>
+    </ul>
+    <li><a href="#committing-guidelines">Committing Guidelines</a></li>
+    <ul>
+      <li>Writers and Artists can commit directly to the <strong>main branch</strong>, as long as they are not changing the <strong>00 Unity Proj</strong> folder.</li>
+      <li>If you are curious, I explain in <a href="#branching--forking">Branching & Forking</a> section (optional).</li>
+    </ul>
+  </ol>
+
+</div>
+
+<p align="right">(<a href="#navigation">Back to Navigation</a>)</p>
+
+<!-- FAMILIAR WITH GITHUB -->
+<div id="familiar-with-github" style="font-size:16px;">
+  <h2>Familiar With Github</h2>
+  <p>Good to hear! With that said, here are the sections I would recommend you read:</p>
+  <ol>
+    <li><a href="#how-will-the-repository-be-used">How Will the Repository Be Used?</a></li>
+    <li><a href="#remote-vs-local">Remote vs. Local</a></li>
+    <ul>
+      <li>May want to brush up on this if you don't know the difference between the remote and local repo.</li>
+    </ul>
+    <li><a href="#uploading-things--making-changes">Uploading Things & Making Changes</a></li>
+    <ul>
+      <li>If you are a Writer, Artist, or Designer, you can upload things <a href="#i-want-to-upload-files-through-my-browser-remote">remotely</a> or <a href="#i-want-to-upload-files-from-my-computer-local">locally</a>, your choice.
+      <li>However, if you are a Programmer, you should upload <a href="#i-want-to-upload-files-from-my-computer-local">locally</a>.</li>
+    </ul>
+    <li><a href="#committing-guidelines">Committing Guidelines</a></li>
+    <ul>
+      <li>This section coincides with <a href="#push-origin">pushing</a> and <a href="#fetch-origin">pulling</a>.</li>
+    </ul>
+    <li><a href="#branching--forking">Branching & Forking</a></li>
+    <ul>
+      <li>Branching is the most important here, so please read carefully.</li>
+      <li>You can fork if you want, but not required. Just thought I would distinguish the two.</li>
+    </ul>
+  </ol>
+
+</div>
+
+<p align="right">(<a href="#navigation">Back to Navigation</a>)</p>
+
+<br></br>
+
+<!-- OVERVIEW -->
+## Repositories
+
+### What Is a Repository?
+
+A repository is what you are looking at right now! It's a central location where you can keep all of your files.
+
+<img src="02 Documentation\00 Assets\README\repository_def.png" width="500"></img>
+
+In the case of GitHub, we can all contribute to this same repository to track and synchronize our work, even when we're apart.
+
+### How Will the Repository Be Used?
+
+You can interact with this repository <a href="#what-does-remote-mean">remotely through browser</a> or <a href="#what-does-local-mean">locally through your machine</a> via the [GitHub Desktop](https://desktop.github.com/download/) application.
+
+You will make changes to the repository through <a href="#committing">**commits**</a> and <a href="#pull-requests">**pull requests**</a>.
 
 <div style="font-size:16px;">
 
@@ -101,29 +227,8 @@ Please check out the sections below for all the information on this repository.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-<!-- OVERVIEW -->
-## Overview
-
-<p style="font-size:16px;">Hello everyone! For easy reading, I've broken the rules up into bite-sized sections. Feel free to skim past any sections you know already. Please let me know if you have any questions.</p>
-
-### What Is a Repository?
-
-A repository is what you are looking at right now! It's a central location where you can keep all of your files.
-
-<img src="02 Documentation\00 Assets\README\repository_def.png" width="500"></img>
-
-In the case of GitHub, we can all contribute to this same repository to track and synchronize our work, even when we're apart.
-
-### How Will the Repository Be Used?
-
-If you're brand new to GitHub, here’s what you need to know.
-
-You can interact with this repository <a href="#what-does-remote-mean">remotely through browser</a> or <a href="#what-does-local-mean">locally through your machine</a> via the [GitHub Desktop](https://desktop.github.com/download/) application.
-
-You will make changes to the repository through <a href="#committing">**commits**</a> and <a href="#pull-requests">**pull requests**</a>.
-
 <br></br>
+
 
 <!-- COMMITTING -->
 ## Committing
@@ -149,6 +254,8 @@ There are two ways to commit to the GitHub:
 
 You can learn about the <a href="#remote-vs-local">differences between these methods</a> and <a href="#uploading-things--making-changes">how to follow them</a> in the sections below.
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 <br></br>
 
 <!-- REMOTE VS. LOCAL -->
@@ -170,9 +277,11 @@ In contrast, "Local" surrounds the idea of everything that is locally available 
 
 <img src="02 Documentation\00 Assets\README\distributed_ver_control_sys.png" width="500"></img>
 
-As you can see, Computer A and Computer B both sync to the same remote repository, but have their own individual versions of the project. That way they can make changes and not corrupt the repository altogether. When you are ready, you can sync your local repository with the remote repository through pushing and pulling.
+As you can see, Computer A and Computer B both sync to the same remote repository, but have their own individual versions of the project. That way they can make changes and not corrupt the repository altogether. When you are ready, you can sync your local repository with the remote repository through <a href="#push-origin">pushing</a> and <a href="#fetch-origin">pulling</a>.
 
 Note: To Programmers reading this, keep in mind that the workflow may be manipulated through different branches to ensure the stability of the project. As of right now, though, aforementioned concept illustrates the bare bones level of this project.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <br></br>
 
@@ -219,6 +328,8 @@ If you are confident on these edits, and are ready to submit them to the main br
 
 This command will sync your local and remote copies together.
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 <br></br>
 
 <!-- COMMITTING GUIDELINES -->
@@ -248,6 +359,8 @@ Here is an example of what you might enter when you are making changes to the re
 Remember: you're *not* writing the declaration of independence. Just a brief overview of what changes you've made, why you made them, what might be incomplete, what needs revisions, etc.
 
 If you're a Writer/Artist and you're commiting to any folder that is *not* the 00 Unity Proj folder at the top of the repository, then you can commit to the main branch. *However!!!!!* If you are a Programmer, please see the <a href="#branching--forking">Branching & Forking</a> section.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <br></br>
 
