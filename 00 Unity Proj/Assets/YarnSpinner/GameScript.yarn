@@ -1,0 +1,51 @@
+﻿title: Start
+tags:
+---
+<i>The manor has been locked down. Nobody in, nobody out, until you all figure out what happened to <b>him</b>.</i>
+===
+
+title: TalkCAM_First
+tags:
+---
+C.A.M.: I am quite sure there was foul play involved. Here, P.A.M. Even this...bolt cutters? Why are those out of its rightful place, in the garage?
+C.A.M.: Someone here wanted him gone.
+<i>You get a pair of bolt cutters.</i> // Added to inv?
+// Description of bolt cutters in inv
+
+// * * * * *
+// THINGS TO OBSERVE
+// * * * * *
+// * * * * *
+// * * * * *
+// ALL DIALOGUE SHOULD BE ITALICIZED(?)
+// * * * * *
+
+title: Observe_CircuitBreaker
+tags:
+---
+Circuit Breaker: <i>...It's broken. It wasn't broken yesterday. You had passed by it!</i>
+===
+
+title: Observe_Clock
+tags:
+---
+Clock On The Wall: <i>The clock reads half past 6. 6:30. 18:30.</i>
+===
+
+title: Observe_BoltCutters
+tags:
+---
+Bolt Cutters: <i>Bolt cutters, usually stored away. How strange, that they're out here.</i>
+===
+
+title: Observe_Chandelier
+tags:
+---
+Broken Chandelier: <i>This is what fell on Geoffrey. The glass has shattered, spread all over the table in a beautiful display of destruction.</i>
+===
+
+title: Observe_Geoffrey
+tags:
+---
+...: <i>Your father. The man who brought you to life, who gave you a chance and even more in your life.</i>
+===
