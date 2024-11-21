@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9cba8c395bb64c04491fa23924edbe52
+guid: 8b5dbde6e206047488ac8936286a031f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -108,28 +108,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: Clock_0
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 0
-        width: 42
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 3, z: 0, w: 3}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7068b332d4bd561409a189ee174bca6e
-      internalID: -1987079481
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -140,8 +119,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Clock_0: -1987079481
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

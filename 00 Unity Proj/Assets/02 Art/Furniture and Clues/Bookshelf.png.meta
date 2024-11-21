@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9cba8c395bb64c04491fa23924edbe52
+guid: 84e4b834365ccb547896190259c2fcbc
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,22 +110,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Clock_0
+      name: Bookshelf_0
       rect:
         serializedVersion: 2
-        x: 16
-        y: 0
-        width: 42
-        height: 48
+        x: 5
+        y: 2
+        width: 21
+        height: 25
       alignment: 0
       pivot: {x: 0, y: 0}
-      border: {x: 0, y: 3, z: 0, w: 3}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7068b332d4bd561409a189ee174bca6e
-      internalID: -1987079481
+      spriteID: 302189db46844c740935cd91a8975747
+      internalID: -301270143
       vertices: []
       indices: 
       edges: []
@@ -141,7 +141,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Clock_0: -1987079481
+      Bookshelf_0: -301270143
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
