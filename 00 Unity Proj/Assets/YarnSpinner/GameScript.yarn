@@ -1,16 +1,49 @@
 ﻿title: Start
 tags:
 ---
+<<declare $hasBoltCutters = false>>
 <i>The manor has been locked down. Nobody in, nobody out, until you all figure out what happened to <b>him</b>.</i>
 ===
 
 title: TalkCAM_First
 tags:
 ---
+
 C.A.M.: I am quite sure there was foul play involved. Here, P.A.M. Even this...bolt cutters? Why are those out of its rightful place, in the garage?
 C.A.M.: Someone here wanted him gone.
-<i>You get a pair of bolt cutters.</i> // Added to inv?
-// Description of bolt cutters in inv
+<i>You get a pair of bolt cutters.</i> // Added to inventory here -WIP
+<<set $hasBoltCutters = true>>
+===
+
+title: TalkADAM_First
+tags:
+---
+<i>He's obviously in distress.</i>
+ADAM: I-I can't believe this. Who would do this!? Who would kill him?
+    -> I don't know, but I'll figure it out.
+        ADAM: ...Good luck. You'll need it.
+    -> Do you have any guesses?
+        ADAM: ...Why would I? Who would do such a thing?!
+        <i>He seems inconsolable.</i>
+    -> It'll be okay, ADAM.
+        ADAM: I don't think so, but... if you say so...
+===
+
+title: TalkSPARK_First
+tags:
+---
+<<if $hasBoltCutters == false>>
+SPARK: Who in their right processor would hurt him?! Geoffrey has done nothing but supply for us...
+<<else>>
+SPARK: Who in their right processor would hurt him?! Geoffrey has done nothing but supply for us...
+SPARK: ...
+SPARK: Hey, what's that?
+P.A.M. (You): C.A.M. offered it to me. They suggested it may be useful evidence.
+SPARK: Bolt cutters... The chandelier does not look too well. I know that ADAM was one to be by the bolt cutters.
+<<endif>>
+===
+
+///DO QUESTIONING SCRIPT NEXT
 
 // * * * * *
 // THINGS TO OBSERVE
