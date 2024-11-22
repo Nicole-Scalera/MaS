@@ -31,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
 
         _rigidbody.velocity = _smoothedMovementInput * _speed;
 
-        // //determine character direction
+        // Determine character direction:
         // if (_movementInput != 0)
         // {
         //      _rigidbody.AddForce(new Vector2(inputHorizontal * _speed, 0f))
@@ -46,6 +46,7 @@ public class PlayerMovement : MonoBehaviour
         // }
 
     }
+
     // Get player input value from Unity
     private void OnMove(InputValue inputValue)
     {
