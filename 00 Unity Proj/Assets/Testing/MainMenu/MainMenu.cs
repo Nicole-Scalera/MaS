@@ -8,7 +8,7 @@ public class MainMenu : MonoBehaviour
     // Declare UIs
     public GameObject tutorialUI;
     public GameObject creditsUI;
-    
+
     void Start()
     {
         tutorialUI.SetActive(false);
