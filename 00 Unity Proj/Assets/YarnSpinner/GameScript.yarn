@@ -1,16 +1,99 @@
-﻿title: Start
+﻿// Declaring var that keep track of how many times you talk to NPCs?
+// Needed so you don't repeat dialogue and progress through story?
+// Change P.A.M. (You) to just you? idk
+
+title: Start
 tags:
 ---
+<<declare $hasBoltCutters = false>>
 <i>The manor has been locked down. Nobody in, nobody out, until you all figure out what happened to <b>him</b>.</i>
 ===
 
 title: TalkCAM_First
 tags:
 ---
+
 C.A.M.: I am quite sure there was foul play involved. Here, P.A.M. Even this...bolt cutters? Why are those out of its rightful place, in the garage?
 C.A.M.: Someone here wanted him gone.
-<i>You get a pair of bolt cutters.</i> // Added to inv?
-// Description of bolt cutters in inv
+<i>You get a pair of bolt cutters.</i>
+// WIP- Displays sprite of bolt cutters & added to player's inventory
+<i>Rusty, old bolt cutters. They haven't been used in quite some time. They're usually stored away. How strange, that they're out here.</i>
+<<set $hasBoltCutters = true>>
+===
+
+title: TalkADAM_First
+tags:
+---
+<i>He's obviously in distress.</i>
+ADAM: I-I can't believe this. Who would do this!? Who would kill him?
+    -> I don't know, but I'll figure it out.
+        ADAM: ...Good luck. You'll need it.
+        <<jump TalkADAM_First>>
+    -> Do you have any guesses?
+        ADAM: ...Why would I? Who would do such a thing?!
+        <<jump TalkADAM_First>>
+        <i>He seems inconsolable.</i>
+    -> It'll be okay, ADAM.
+        ADAM: I don't think so, but... if you say so...
+        <<jump TalkADAM_First>>
+    -> Good-bye, ADAM.
+===
+
+title: TalkSPARK_First
+tags:
+---
+<<if $hasBoltCutters == false>>
+SPARK: Who in their right processor would hurt him?! Geoffrey has done nothing but supply for us...
+<<else>>
+SPARK: Who in their right processor would hurt him?! Geoffrey has done nothing but supply for us...
+SPARK: ...
+SPARK: Hey, what's that?
+P.A.M. (You): C.A.M. offered it to me. They suggested it may be useful evidence.
+SPARK: Bolt cutters... The chandelier does not look too well. I know that ADAM was one to be by the bolt cutters.
+<<endif>>
+===
+
+//QUESTIONING SCRIPT -still very much wip as on doc so not much here
+title: QuestionSPARK
+tags:
+---
+SPARK: What? What's going on?
+    -> Do you have any suspicions?
+        SPARK: I truly don't know who would do this to him. But, this was C.A.M.'s retirement...
+        <<jump QuestionSPARK>>
+    -> What were you doing <i>before</i> Geoffrey died?
+        SPARK: I was just finalizing dinner! Creating another masterpiece for dessert, like usual.
+        <<jump QuestionSPARK>>
+    -> What were you doing <i>when</i> Geoffrey died?
+        SPARK: Still working on dessert! A lemon meringue, one of his favorites. This is such a travesty. Here, if it'll help you, you can have some of the cake.
+        // Cake is clue?
+        <<jump QuestionSPARK>>
+    -> What do you know about the bolt cutters?
+        <<jump QuestionSPARK>>
+    -> What do you know about the broken circuit breaker?
+        <<jump QuestionSPARK>>
+    -> I don't have anymore questions.
+        // SPARK reaction? or just quit out of dialogue maybe?
+===
+
+
+//this is for testing purposes, delete later
+title: Test_ItemDesc
+tags:
+---
+<i>Which description do you want to view?</i>
+    -> Circuit Breaker
+        <<jump Observe_CircuitBreaker>>
+    -> Clock
+        <<jump Observe_Clock>>
+    -> Bolt Cutters
+        <<jump Observe_BoltCutters>>
+    -> Chandelier
+        <<jump Observe_Chandelier>>
+    -> Geoffrey
+        <<jump Observe_Geoffrey>>
+    -> Quit.
+===
 
 // * * * * *
 // THINGS TO OBSERVE
@@ -23,29 +106,34 @@ C.A.M.: Someone here wanted him gone.
 title: Observe_CircuitBreaker
 tags:
 ---
-Circuit Breaker: <i>...It's broken. It wasn't broken yesterday. You had passed by it!</i>
+Circuit Breaker: <i>...It's broken. It wasn't broken yesterday. You had passed by it! Someone must have broken it today, with the power outage.</i>
+<<jump Test_ItemDesc>> // Testing/debugging purposes
 ===
 
 title: Observe_Clock
 tags:
 ---
-Clock On The Wall: <i>The clock reads half past 6. 6:30. 18:30.</i>
+Clock On The Wall: <i>The clock reads half past 6. 6:30. 18:30. Time of death for...</i>
+<<jump Test_ItemDesc>> // Testing/debugging purposes
 ===
 
 title: Observe_BoltCutters
 tags:
 ---
-Bolt Cutters: <i>Bolt cutters, usually stored away. How strange, that they're out here.</i>
+Bolt Cutters: <i>Rusty, old bolt cutters. They haven't been used in quite some time. They're usually stored away. How strange, that they're out here.</i>
+<<jump Test_ItemDesc>> // Testing/debugging purposes
 ===
 
 title: Observe_Chandelier
 tags:
 ---
 Broken Chandelier: <i>This is what fell on Geoffrey. The glass has shattered, spread all over the table in a beautiful display of destruction.</i>
+<<jump Test_ItemDesc>> // Testing/debugging purposes
 ===
 
 title: Observe_Geoffrey
 tags:
 ---
 ...: <i>Your father. The man who brought you to life, who gave you a chance and even more in your life.</i>
+<<jump Test_ItemDesc>> // Testing/debugging purposes
 ===

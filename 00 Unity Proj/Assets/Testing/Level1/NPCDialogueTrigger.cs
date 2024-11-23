@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Yarn.Unity;
 
 public class NPCDialogueTrigger : MonoBehaviour
 {
     public GameObject PressEUI;
+    public DialogueRunner dialogueRunner; // Reference to Yarn Spinner's DialogueRunner
+    public string dialogueNode; // Reference to Yarn Spinner dialogue node to start
 
     // Start is called before the first frame update
     void Start()
@@ -39,13 +42,21 @@ public class NPCDialogueTrigger : MonoBehaviour
         if (PressEUI.activeSelf && Input.GetKeyDown(KeyCode.E))
         {
             // Start dialogue/interaction
+            PressEUI.SetActive(false);
             StartDialogue();
         }
     }
 
     private void StartDialogue()
     {
-        // Implement dialogue start code here (WIP)
-        Debug.Log("Dialogue has been started.");
+        if (dialogueRunner.IsDialogueRunning)
+        {
+            // Implement dialogue start code here (WIP)
+            Debug.Log("Dialogue has been started.");
+            return;
+        }
+    
+        dialogueRunner.StartDialogue(dialogueNode);
+        Debug.Log($"Started dialogue: {dialogueNode}"); 
     }
 }
