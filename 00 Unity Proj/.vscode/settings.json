@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Top-Down Game.sln"
+    "dotnet.defaultSolution": "00 Unity Proj.sln"
 }
