@@ -5,8 +5,13 @@
 title: Start
 tags:
 ---
+// Important Data Values
 <<declare $hasBoltCutters = false>>
+
+
 <i>The manor has been locked down. Nobody in, nobody out, until you all figure out what happened to <b>him</b>.</i>
+    -> Test This Button
+        <<jump TalkCAM_First>>
 ===
 
 title: TalkCAM_First
