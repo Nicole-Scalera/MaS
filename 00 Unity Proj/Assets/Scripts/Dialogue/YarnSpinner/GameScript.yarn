@@ -6,11 +6,17 @@ title: Start
 tags:
 ---
 // Important Data Values
-// <<declare $hasBoltCutters = false>>
 
 // Set all clues to FALSE at start of game
-<<declare $clue0Active = false>>
-<<declare $clue1Active = false>>
+
+                                 // NAME                METHOD
+<<declare $clue0Active = false>> // Bolt Cutters        [Dialogue]
+<<declare $clue1Active = false>> // Clock               [Collision]
+<<declare $clue2Active = false>> // Fish-Sized Gun      [Collision]
+<<declare $clue3Active = false>> // Red Herring         [Dialogue]
+<<declare $clue4Active = false>> // Circuit Breaker     [Collision]
+<<declare $clue5Active = false>> // Chandelier          [Collision]
+<<declare $clue6Active = false>> // Oven Left On        [Collision]
 
 
 <i>The manor has been locked down. Nobody in, nobody out, until you all figure out what happened to <b>him</b>.</i>
@@ -35,19 +41,30 @@ C.A.M.: Someone here wanted him gone.
 title: TalkADAM_First
 tags:
 ---
-<i>He's obviously in distress.</i>
-ADAM: I-I can't believe this. Who would do this!? Who would kill him?
+// Temporary variables - possibly delete?
+<<declare $asked_who = false>>
+<<declare $asked_guesses = false>>
+<<declare $asked_itsok = false>>
+
+ADAM:
+    <i>He's obviously in distress.</i>
+    ADAM: I-I can't believe this. Who would do this!? Who would kill him?
     -> I don't know, but I'll figure it out.
+        <<set $asked_who = true>>
         ADAM: ...Good luck. You'll need it.
-        <<jump TalkADAM_First>>
+         <<jump TalkADAM_First>>
     -> Do you have any guesses?
+        <<set $asked_guesses = true>>
         ADAM: ...Why would I? Who would do such a thing?!
-        <<jump TalkADAM_First>>
         <i>He seems inconsolable.</i>
+        <<jump TalkADAM_First>>
     -> It'll be okay, ADAM.
+        <<set $asked_itsok = true>>
         ADAM: I don't think so, but... if you say so...
         <<jump TalkADAM_First>>
     -> Good-bye, ADAM.
+            <<stop>>
+    <<jump TalkADAM_First>>
 ===
 
 title: TalkSPARK_First
@@ -69,7 +86,7 @@ SPARK: Bolt cutters... The chandelier does not look too well. I know that ADAM w
 title: QuestionSPARK
 tags:
 ---
-SPARK: What? What's going on?
+SPARK: What? What's going on? Any new findings?
     -> Do you have any suspicions?
         SPARK: I truly don't know who would do this to him. But, this was C.A.M.'s retirement...
         <<jump QuestionSPARK>>
@@ -78,14 +95,27 @@ SPARK: What? What's going on?
         <<jump QuestionSPARK>>
     -> What were you doing <i>when</i> Geoffrey died?
         SPARK: Still working on dessert! A lemon meringue, one of his favorites. This is such a travesty. Here, if it'll help you, you can have some of the cake.
-        // Cake is clue?
+        <i>You receive a piece of lemon meringue cake.</i>
+        <<set $hasCake = true>> // SESAME
         <<jump QuestionSPARK>>
     -> What do you know about the bolt cutters?
+        SPARK: Why were there bolt cutters out here? That's... <i>she pauses, obviously confused.</i> I don't understand why they would be here.
         <<jump QuestionSPARK>>
     -> What do you know about the broken circuit breaker?
+    // If (the player does NOT have the Bolt Cutters)
+    <<if $clue0Active == false>>
+    SPARK: Well, I didn't know it was broken.
+    <<else>>
+    SPARK: Well, I didn't know it was broken.
+    SPARK: ...
+    SPARK: Bolt cutters, and a broken circuit breaker... I don't like the look of this, P.A.M.
+    <<endif>>
         <<jump QuestionSPARK>>
-    -> I don't have anymore questions.
-        // SPARK reaction? or just quit out of dialogue maybe?
+    -> Who do <i>you</i> think is guilty?
+        SPARK: Guilty? I... ADAM. With the bolt cutters, it all points to him.
+        <<jump QuestionSPARK>>
+    -> I don't have any more questions.
+        <<stop>>
 ===
 
 
@@ -140,6 +170,28 @@ title: Observe_Chandelier
 tags:
 ---
 Broken Chandelier: <i>This is what fell on Geoffrey. The glass has shattered, spread all over the table in a beautiful display of destruction.</i>
+<<jump Test_ItemDesc>> // Testing/debugging purposes
+===
+
+title: Observe_Oven
+tags:
+---
+Oven That Is Left On: <i>...</i>
+SPARK: My precious art!!! It burned because I couldn't seen in the dark! Curse whoever did this, first Dad, now my luxury cake, everything is ruined!!!
+<<jump Test_ItemDesc>> // Testing/debugging purposes
+===
+
+title: Observe_DiningRoomTable
+tags:
+---
+Dining Room Table: <i>The dining room table. A simple piece of furniture, but one that holds a thousand memories. Dad used to sit at the end...</i>
+<<jump Test_ItemDesc>> // Testing/debugging purposes
+===
+
+title: Observe_Chairs
+tags:
+---
+Chairs: <i>Chairs for sitting down if your legs get tired. We're all robots except for Dad, so to us it is a just a formality to sit. It's impossible for us to get fatigued.</i>
 <<jump Test_ItemDesc>> // Testing/debugging purposes
 ===
 
