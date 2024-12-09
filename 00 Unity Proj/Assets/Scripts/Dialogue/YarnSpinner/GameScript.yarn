@@ -6,7 +6,11 @@ title: Start
 tags:
 ---
 // Important Data Values
-<<declare $hasBoltCutters = false>>
+// <<declare $hasBoltCutters = false>>
+
+// Set all clues to FALSE at start of game
+<<declare $clue0Active = false>>
+<<declare $clue1Active = false>>
 
 
 <i>The manor has been locked down. Nobody in, nobody out, until you all figure out what happened to <b>him</b>.</i>
@@ -23,7 +27,9 @@ C.A.M.: Someone here wanted him gone.
 <i>You get a pair of bolt cutters.</i>
 // WIP- Displays sprite of bolt cutters & added to player's inventory
 <i>Rusty, old bolt cutters. They haven't been used in quite some time. They're usually stored away. How strange, that they're out here.</i>
-<<set $hasBoltCutters = true>>
+
+<<set $clue0Active = true>> // Add Bolt Cutters to Inventory
+
 ===
 
 title: TalkADAM_First
@@ -47,7 +53,8 @@ ADAM: I-I can't believe this. Who would do this!? Who would kill him?
 title: TalkSPARK_First
 tags:
 ---
-<<if $hasBoltCutters == false>>
+// If the player does not have the Bolt Cutters
+<<if $clue0Active == false>>
 SPARK: Who in their right processor would hurt him?! Geoffrey has done nothing but supply for us...
 <<else>>
 SPARK: Who in their right processor would hurt him?! Geoffrey has done nothing but supply for us...
