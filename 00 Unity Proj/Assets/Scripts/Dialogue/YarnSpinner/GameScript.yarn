@@ -19,6 +19,18 @@ tags:
 <<declare $clue6Active = false>> // Oven Left On        [Collision]
 
 
+// Turning the above commands into the following to connect
+// the GameManager and InventoryManager together.
+<<DeclareClue 0 "Bolt Cutters" "Rusty, old bolt cutters. They haven't been used in quite some time. They're usually stored away. How strange, that they're out here.">>
+<<DeclareClue 1 "Clock" "The clock reads half past 6. 6:30. 18:30. Time of death for...">>
+<<DeclareClue 2 "Fish-Sized Gun" "">>
+<<DeclareClue 3 "Red Herring" "">>
+<<DeclareClue 4 "Circuit Breaker" "...It's broken. It wasn't broken yesterday. You had passed by it! Someone must have broken it today, with the power outage.">>
+<<DeclareClue 5 "Chandelier" "This is what fell on Geoffrey. The glass has shattered, spread all over the table in a beautiful display of destruction.">>
+<<DeclareClue 6 "Oven Left On" "My precious art!!! It burned because I couldn't seen in the dark! Curse whoever did this, first Dad, now my luxury cake, everything is ruined!!!">>
+
+
+
 
 <i>The manor has been locked down. Nobody in, nobody out, until you all figure out what happened to <b>him</b>.</i>
     -> Test This Button
@@ -160,6 +172,7 @@ Clock On The Wall: <i>The clock reads half past 6. 6:30. 18:30. Time of death fo
 <<jump Test_ItemDesc>> // Testing/debugging purposes
 ===
 
+// Clue 1
 title: Observe_BoltCutters
 tags:
 ---
