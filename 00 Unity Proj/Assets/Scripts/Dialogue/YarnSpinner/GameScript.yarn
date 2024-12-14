@@ -7,30 +7,35 @@ tags:
 ---
 // Important Data Values
 
-// Set all clues to FALSE at start of game
+// === Clues Catalog ===
 
-                                 // NAME                METHOD
-<<declare $clue0Active = false>> // Bolt Cutters        [Dialogue]
-<<declare $clue1Active = false>> // Clock               [Collision]
-<<declare $clue2Active = false>> // Fish-Sized Gun      [Collision]
-<<declare $clue3Active = false>> // Red Herring         [Dialogue]
-<<declare $clue4Active = false>> // Circuit Breaker     [Collision]
-<<declare $clue5Active = false>> // Chandelier          [Collision]
-<<declare $clue6Active = false>> // Oven Left On        [Collision]
+// NAME                 ID      METHOD
+// Bolt Cutters         0       [Dialogue]
+// Clock                1       [Collision]
+// Fish-Sized Gun       2       [Collision]
+// Red Herring          3       [Dialogue]
+// Circuit Breaker      4       [Collision]
+// Chandelier           5       [Collision]
+// Oven Left On         6       [Collision]
 
 
-// Turning the above commands into the following to connect
-// the GameManager and InventoryManager together.
+// Grab these functions from the GameManager, which originated in the InventoryManager.
 <<DeclareClue 0 "Bolt Cutters" "Rusty, old bolt cutters. They haven't been used in quite some time. They're usually stored away. How strange, that they're out here.">>
 <<DeclareClue 1 "Clock" "The clock reads half past 6. 6:30. 18:30. Time of death for...">>
-<<DeclareClue 2 "Fish-Sized Gun" "">>
-<<DeclareClue 3 "Red Herring" "">>
+<<DeclareClue 2 "Fish-Sized Gun" "A gun that would fit perfectly in the flipper of a fish. The barrel is warm and some bullets are missing from the magazine. Geoffery wasn't shot though...">>
+<<DeclareClue 3 "Red Herring" "A suspicious red herring with legs found very close to the Fish-Sized Gun. Claims they don’t know what you’re talking about when you bring it up. (How are they in your evidence bag? They’re as big as you…)">>
 <<DeclareClue 4 "Circuit Breaker" "...It's broken. It wasn't broken yesterday. You had passed by it! Someone must have broken it today, with the power outage.">>
 <<DeclareClue 5 "Chandelier" "This is what fell on Geoffrey. The glass has shattered, spread all over the table in a beautiful display of destruction.">>
 <<DeclareClue 6 "Oven Left On" "My precious art!!! It burned because I couldn't seen in the dark! Curse whoever did this, first Dad, now my luxury cake, everything is ruined!!!">>
 
-
-
+// Hide all clues at the beginning of the game
+<<ClueVisibility 0 false>> // Bolt Cutters
+<<ClueVisibility 1 false>> // Clock
+<<ClueVisibility 2 false>> // Oven Fish-Sized Gun
+<<ClueVisibility 3 false>> // Red Herring
+<<ClueVisibility 4 false>> // Circuit Breaker
+<<ClueVisibility 5 false>> // Chandelier
+<<ClueVisibility 6 false>> // Oven Left On
 
 <i>The manor has been locked down. Nobody in, nobody out, until you all figure out what happened to <b>him</b>.</i>
     -> Test This Button
@@ -47,7 +52,7 @@ C.A.M.: Someone here wanted him gone.
 // WIP- Displays sprite of bolt cutters & added to player's inventory
 <i>Rusty, old bolt cutters. They haven't been used in quite some time. They're usually stored away. How strange, that they're out here.</i>
 
-<<set $clue0Active = true>> // Add Bolt Cutters to Inventory
+<<ClueVisibility 0 true>> // Add Bolt Cutters to Inventory
 
 ===
 
@@ -84,7 +89,7 @@ title: TalkSPARK_First
 tags:
 ---
 // If the player does not have the Bolt Cutters
-<<if $clue0Active == false>>
+<<if $clue0Active == false>> // FIX
 SPARK: Who in their right processor would hurt him?! Geoffrey has done nothing but supply for us...
 <<else>>
 SPARK: Who in their right processor would hurt him?! Geoffrey has done nothing but supply for us...
@@ -109,7 +114,6 @@ SPARK: What? What's going on? Any new findings?
     -> What were you doing <i>when</i> Geoffrey died?
         SPARK: Still working on dessert! A lemon meringue, one of his favorites. This is such a travesty. Here, if it'll help you, you can have some of the cake.
         <i>You receive a piece of lemon meringue cake.</i>
-        <<set $hasCake = true>> // SESAME
         <<jump QuestionSPARK>>
     -> What do you know about the bolt cutters?
         SPARK: Why were there bolt cutters out here? That's... <i>she pauses, obviously confused.</i> I don't understand why they would be here.

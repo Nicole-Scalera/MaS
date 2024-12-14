@@ -14,7 +14,10 @@ public class InventoryManager : MonoBehaviour
     // that we can easily access it anywhere
     public static InventoryManager Instance;
 
-    // Create an array from the Clue class (see Clue.cs)
+    // Create an Inventory array to append discovered clues
+    public List<string> inventoryContents = new List<string>();
+
+    // Create a catalog array from the Clue class (see Clue.cs)
     public Clue[] clueCatalog = new Clue[7];
 
     // Initialize the array with placeholder clues
@@ -42,6 +45,8 @@ public class InventoryManager : MonoBehaviour
         {
             clueCatalog[id].ClueName = name;
             clueCatalog[id].ClueDescription = description;
+
+            // Add code here to add it to the inventory.
 
             // If the clue has been created, log this message
             Debug.Log($"CLUE CREATED: Clue Clue Name: {name}, ID: {id}");
@@ -75,6 +80,13 @@ public class InventoryManager : MonoBehaviour
             Debug.LogWarning($"Clue at index {id} is either out of bounds or does not exist.");
         }
     }
+
+    /* Check that a clue is in the Inventory.
+     *
+     *
+     *
+     *
+     */
 
 }
 

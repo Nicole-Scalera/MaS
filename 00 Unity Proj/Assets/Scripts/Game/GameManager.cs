@@ -31,13 +31,15 @@ public class GameManager : MonoBehaviour
 
     }
 
-    // Create YarnSpinner Command to Create a Clue (see DeclareClue in InventoryManager)
+    // Create YarnSpinner Command to Create a Clue
+    // (see DeclareClue in InventoryManager | See Clue.cs)
     [YarnCommand("DeclareClue")]
-    public void DeclareClue(int clueId, string clueName, string clueDescription)
+    public void DeclareClue(int clueID, string clueName, string clueDescription)
     {
-        if (inventoryManager != null) // Check that the InventoryManager is present
+        // Check that the InventoryManager is present
+        if (inventoryManager != null)
         {
-            inventoryManager.DeclareClue(clueId, clueName, clueDescription);
+            inventoryManager.DeclareClue(clueID, clueName, clueDescription);
         }
         else
         {
@@ -45,5 +47,26 @@ public class GameManager : MonoBehaviour
             Debug.LogWarning("InventoryManager not connected to GameManager.");
         }
     }
+
+
+    // Create YarnSpinner Command to make a Clue visible or invisible
+    // (see DeclareClue in InventoryManager)
+    [YarnCommand("ClueVisibility")]
+    public void ClueVisibility(int clueID, bool clueVisibility)
+    {
+        // Check that the InventoryManager is present
+        if (inventoryManager != null)
+        {
+            inventoryManager.ClueVisibility(clueID, clueVisibility);
+        }
+        else
+        {
+            // In case the InventoryManger is not there
+            Debug.LogWarning("InventoryManager not connected to GameManager.");
+        }
+    }
+
+
+
 
 }
