@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -13,7 +14,7 @@ public class Clue
 {
 
     public string ClueName { get;  set; } // Name of the clue
-    public string ClueDescription { get; set; } // Description displayed in UI
+    public string ClueDescription { get; set; } // Description of the clue
     public bool ClueVisibility { get; set; }  // Visibility state of the clue
 
     // Pass in these three parameters

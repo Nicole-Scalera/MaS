@@ -58,9 +58,11 @@ public class InventoryManager : MonoBehaviour
     }
 
     /* Find a Clue and update the Visibility value.
-     *      - i.e. is the clue present in the inventory?  
-     *      - False = Not in Inventory
-     *      - True = Inventory contains this clue
+     *      1. ID (index # in the clueCatalog)
+     *      2. Visibility
+     *          - i.e. is the clue present in the inventory?  
+     *              - False = Not in Inventory
+     *              - True = Inventory contains this clue
      *
      * I made this a separate function from DeclareClue, as
      * the time of activation is different for each clue.          */
