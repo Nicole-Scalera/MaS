@@ -1077,9 +1077,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueRunner: {fileID: 0}
+  dialogueSystem: {fileID: 0}
   inventoryManager: {fileID: 0}
-  jeremyExpressions: []
-  clues: []
+  inventorySystem: {fileID: 0}
 --- !u!1 &564641290
 GameObject:
   m_ObjectHideFlags: 0
@@ -1310,9 +1310,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 467f463a8d58c494da2e42521a8df7c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clues: []
-  gameManager: {fileID: 0}
-  myRunner: {fileID: 0}
+  clueCatalog: []
+  inventoryContents: []
 --- !u!1 &605923421
 GameObject:
   m_ObjectHideFlags: 0
@@ -2222,7 +2221,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3579681405068720530, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
   m_PrefabInstance: {fileID: 1397626559}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 898987943}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4bec29c0a230741bdac901dba8da47ee, type: 3}
@@ -2273,9 +2272,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueRunner: {fileID: 794342701}
+  dialogueSystem: {fileID: 898987943}
   inventoryManager: {fileID: 1543203377}
-  jeremyExpressions: []
-  clues: []
+  inventorySystem: {fileID: 1918467918}
+--- !u!1 &898987943 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2753718018764665327, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
+  m_PrefabInstance: {fileID: 1397626559}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1027559934
 GameObject:
   m_ObjectHideFlags: 0
@@ -4454,40 +4458,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 467f463a8d58c494da2e42521a8df7c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clues: []
-  gameManager: {fileID: 0}
-  myRunner: {fileID: 0}
---- !u!1 &1547258581
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1547258582}
-  m_Layer: 0
-  m_Name: Clues
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1547258582
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1547258581}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 380.15518, y: 246.7008, z: 1.9557778}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  clueCatalog: []
+  inventoryContents: []
 --- !u!1 &1780048637
 GameObject:
   m_ObjectHideFlags: 0
@@ -4929,11 +4901,59 @@ Transform:
   - {fileID: 1202420079}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1918467918
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1918467919}
+  - component: {fileID: 1918467920}
+  m_Layer: 0
+  m_Name: InventoryManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1918467919
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918467918}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 347.4712, y: 235.43117, z: -1.158984}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1918467920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918467918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 467f463a8d58c494da2e42521a8df7c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clueCatalog: []
+  inventoryContents: []
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
+  - {fileID: 832763057}
+  - {fileID: 1918467919}
   - {fileID: 619394802}
   - {fileID: 564641293}
   - {fileID: 605923422}
@@ -4947,5 +4967,3 @@ SceneRoots:
   - {fileID: 1116037862}
   - {fileID: 699477076}
   - {fileID: 554043116}
-  - {fileID: 1547258582}
-  - {fileID: 832763057}

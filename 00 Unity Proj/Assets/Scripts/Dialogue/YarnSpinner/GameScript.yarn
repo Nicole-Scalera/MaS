@@ -52,7 +52,7 @@ C.A.M.: Someone here wanted him gone.
 // WIP- Displays sprite of bolt cutters & added to player's inventory
 <i>Rusty, old bolt cutters. They haven't been used in quite some time. They're usually stored away. How strange, that they're out here.</i>
 
-<<ClueVisibility 0 true>> // Add Bolt Cutters to Inventory
+// <<ClueVisibility 0 true>> // Add Bolt Cutters to Inventory
 
 ===
 

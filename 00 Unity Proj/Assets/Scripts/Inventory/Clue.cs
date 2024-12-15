@@ -13,6 +13,7 @@ using UnityEngine;
 public class Clue
 {
 
+    // Create these properties for the clueCatalog array
     public string ClueName { get;  set; } // Name of the clue
     public string ClueDescription { get; set; } // Description of the clue
     public bool ClueVisibility { get; set; }  // Visibility state of the clue
@@ -27,6 +28,3 @@ public class Clue
     }
 
 }
-
-
-// Side bar: it looks like Visibility is apart of a package called using UnityEngine.UIElements;
