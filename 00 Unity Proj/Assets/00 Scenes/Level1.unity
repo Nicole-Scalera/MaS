@@ -1313,6 +1313,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: []
+  clueManagerObject: {fileID: 0}
   inventoryContents: []
 --- !u!1 &605923421
 GameObject:
@@ -5018,6 +5019,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventory:
   - {fileID: 1543203375}
+  clueManagerObject: {fileID: 1001359648}
   inventoryContents: []
 --- !u!1 &2083733803 stripped
 GameObject:

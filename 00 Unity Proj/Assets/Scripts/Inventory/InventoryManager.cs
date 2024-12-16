@@ -14,6 +14,11 @@ public class InventoryManager : MonoBehaviour
     public static InventoryManager Instance;
     public GameObject[] inventory;
 
+    // Connect the clueManager to the InventoryManager
+    //public GameObject clueManagerObj;
+    //public ClueManager clueManager;
+    public ClueManager clueManager;
+
     // ========== Clue Catalog ==========
     
 
@@ -21,7 +26,15 @@ public class InventoryManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // Get the ClueManager component from the assigned GameObject
+        clueManager.GetComponent<ClueManager>();
 
+        // if (clueManager != null)
+        // {
+        //     // Access the clueCatalog array
+        //     ClueManager.Clue[] clueCatalog = clueManager.clueCatalog;
+        //     Debug.Log("First clue: " + clueCatalog[0].clueName);
+        // }
     }
     
     // ==================================

@@ -9,14 +9,16 @@ using UnityEditor;
 public class ClueManager : MonoBehaviour
 {
 
+    public static ClueManager Instance;
+
     // Create a reference to the storage variable,
     // just like GameManager.cs
     public VariableStorageBehaviour storage;
 
-/* This class will store the following:
- *    1. The name of a clue
- *    2. The description to be displayed via the Inventory
- *    3. Whether or not a clue is visible (i.e. has been discovered) */
+    /* This class will store the following:
+     *    1. The name of a clue
+     *    2. The description to be displayed via the Inventory
+     *    3. Whether or not a clue is visible (i.e. has been discovered) */
 
     [System.Serializable] // Makes it editable in the Unity Inspector
     public class Clue
@@ -42,6 +44,7 @@ public class ClueManager : MonoBehaviour
 
     // Create a catalog array from the Clue class above
     public Clue[] clueCatalog = new Clue[7];
+
 
     void Awake()
     {
