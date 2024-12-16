@@ -19,23 +19,24 @@ tags:
 // Oven Left On         6       [Collision]
 
 
-// Grab these functions from the GameManager, which originated in the InventoryManager.
-<<DeclareClue 0 "Bolt Cutters" "Rusty, old bolt cutters. They haven't been used in quite some time. They're usually stored away. How strange, that they're out here.">>
-<<DeclareClue 1 "Clock" "The clock reads half past 6. 6:30. 18:30. Time of death for...">>
-<<DeclareClue 2 "Fish-Sized Gun" "A gun that would fit perfectly in the flipper of a fish. The barrel is warm and some bullets are missing from the magazine. Geoffery wasn't shot though...">>
-<<DeclareClue 3 "Red Herring" "A suspicious red herring with legs found very close to the Fish-Sized Gun. Claims they don’t know what you’re talking about when you bring it up. (How are they in your evidence bag? They’re as big as you…)">>
-<<DeclareClue 4 "Circuit Breaker" "...It's broken. It wasn't broken yesterday. You had passed by it! Someone must have broken it today, with the power outage.">>
-<<DeclareClue 5 "Chandelier" "This is what fell on Geoffrey. The glass has shattered, spread all over the table in a beautiful display of destruction.">>
-<<DeclareClue 6 "Oven Left On" "My precious art!!! It burned because I couldn't seen in the dark! Curse whoever did this, first Dad, now my luxury cake, everything is ruined!!!">>
+// Initialize the names of cluees, and send them to ClueManager.cs
+// to be parsed out and appended to the clueCatalog array.
+<<declare $clue0Name = "Bolt Cutters">>
+<<declare $clue1Name = "Clock">>
+<<declare $clue2Name = "Fish-Sized Gun">>
+<<declare $clue3Name = "Red Herring">>
+<<declare $clue4Name = "Circuit Breaker">>
+<<declare $clue5Name = "Chandelier">>
+<<declare $clue6Name = "Oven Left On">>
 
-// Hide all clues at the beginning of the game
-<<ClueVisibility 0 false>> // Bolt Cutters
-<<ClueVisibility 1 false>> // Clock
-<<ClueVisibility 2 false>> // Oven Fish-Sized Gun
-<<ClueVisibility 3 false>> // Red Herring
-<<ClueVisibility 4 false>> // Circuit Breaker
-<<ClueVisibility 5 false>> // Chandelier
-<<ClueVisibility 6 false>> // Oven Left On
+// Then, add the descriptions for the clues, and do the same thing.
+<<declare $clue0Desc = "Rusty, old bolt cutters. They haven't been used in quite some time. They're usually stored away. How strange, that they're out here.">>
+<<declare $clue1Desc = "The clock reads half past 6. 6:30. 18:30. Time of death for...">>
+<<declare $clue2Desc = "A gun that would fit perfectly in the flipper of a fish. The barrel is warm and some bullets are missing from the magazine. Geoffery wasn't shot though...">>
+<<declare $clue3Desc = "A suspicious red herring with legs found very close to the Fish-Sized Gun. Claims they don’t know what you’re talking about when you bring it up. (How are they in your evidence bag? They’re as big as you...)">>
+<<declare $clue4Desc = "...It's broken. It wasn't broken yesterday. You had passed by it! Someone must have broken it today, with the power outage.">>
+<<declare $clue5Desc = "This is what fell on Geoffrey. The glass has shattered, spread all over the table in a beautiful display of destruction.">>
+<<declare $clue6Desc = "My precious art!!! It burned because I couldn't seen in the dark! Curse whoever did this, first Dad, now my luxury cake, everything is ruined!!!">>
 
 <i>The manor has been locked down. Nobody in, nobody out, until you all figure out what happened to <b>him</b>.</i>
     -> Test This Button

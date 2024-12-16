@@ -5,7 +5,6 @@ using Yarn.Unity;
 using UnityEngine.UI;
 using TMPro;
 using System;
-//using static Sirenix.Utilities.Editor.MultilineWrapLayoutUtility;
 
 public class InventoryManager : MonoBehaviour
 {
@@ -13,23 +12,15 @@ public class InventoryManager : MonoBehaviour
     // Create an instance of the InventoryManager so
     // that we can easily access it anywhere
     public static InventoryManager Instance;
-
+    public GameObject[] inventory;
 
     // ========== Clue Catalog ==========
+    
 
-    // Create a catalog array from the Clue class (see Clue.cs)
-    public Clue[] clueCatalog = new Clue[7];
 
-    // Initialize the array with placeholder clues
-    public InventoryManager()
+    // Start is called before the first frame update
+    void Start()
     {
-        // Create a new clue from the Clue class
-        for (int i = 0; i < clueCatalog.Length; i++)
-        {
-            // Initialize with default values
-            clueCatalog[i] = new Clue("", "", false);
-            
-        }
 
     }
     
@@ -53,40 +44,58 @@ public class InventoryManager : MonoBehaviour
      *          - i.e. what does the player see when clue
      *          [id] is selected in the inventory?          */
 
-    public void DeclareClue(int id, string name, string description)
+    // public void DeclareClue(int id, string name, string description)
+    // {
+    //     if (id >= 0 && id < clueCatalog.Length)
+    //     {
+    //         // Delcare a clue by name and description
+    //         clueCatalog[id].ClueName = name;
+    //         clueCatalog[id].ClueDescription = description;
+
+    //         // Add code here to add it to the inventory.
+
+    //         // If the clue has been created, log this message
+    //         Debug.Log($"CLUE CREATED: Clue Clue Name: {name}, ID: {id}");
+    //     }
+    //     else
+    //     {
+    //         Debug.LogWarning($"Clue at index {id} is either out of bounds or does not exist.");
+    //     }
+    // }
+
+    // Method to populate the clueCatalog from GameManager
+    public void SetClueInCatalog(string clueName, string clueDescription)
     {
-        if (id >= 0 && id < clueCatalog.Length)
-        {
-            // Delcare a clue by name and description
-            clueCatalog[id].ClueName = name;
-            clueCatalog[id].ClueDescription = description;
 
-            // Add code here to add it to the inventory.
+        // for (int i = 0; i < clueCatalog.Length; i++)
+        // {
 
-            // If the clue has been created, log this message
-            Debug.Log($"CLUE CREATED: Clue Clue Name: {name}, ID: {id}");
-        }
-        else
-        {
-            Debug.LogWarning($"Clue at index {id} is either out of bounds or does not exist.");
-        }
+        //     // Collect the index from YarnSpinner as a string (from GameScript.yarn)
+        //     // and then convert it into an int here
+        //     //int clueIDint = int.Parse(clueIDstr);
+            
+        //     clueCatalog[i] = new Clue(clueName, clueDescription, false);
+
+        //     Debug.Log("Clue Created: ");
+
+        //     // // Access each clue using clueCatalog[i]
+        //     // Clue clue = clueCatalog[i];
+        //     // Console.WriteLine($"Clue ID: {i}, Name: {clue.ClueName}, Description: {clue.ClueDescription}");
+        // }
+        
+        // if (clueIDint >= 0 && clueIDint < clueCatalog.Length)
+        // {
+        //     clueCatalog[clueIDint] = new Clue(clueName, clueDescription, false); // Update the clue
+        // }
+        // else
+        // {
+        //     Debug.LogWarning("Clue ID out of bounds while setting clue.");
+        // }
     }
 
-    public void DeclareClueEEE(int id)
-    {
-        if (id >= 0 && id < clueCatalog.Length)
-        {
 
-            // Add code here to add it to the inventory.
 
-            // If the clue has been created, log this message
-            Debug.Log($"CLUE CREATED: ID: {id}");
-        }
-        else
-        {
-            Debug.LogWarning($"Clue at index {id} is either out of bounds or does not exist.");
-        }
-    }
+
 
     /* Update a Clue's Visibility value:
      *      1. ID (index # in the clueCatalog)
@@ -98,24 +107,24 @@ public class InventoryManager : MonoBehaviour
      * I made this a separate function from DeclareClue, as
      * the time of activation is different for each clue.          */
 
-    public void ClueVisibility(int id, bool visibility)
-    {
-        if (id >= 0 && id < clueCatalog.Length) // If the clue id is out of bounds
-        {
-            // Toggle the visibility of the clue
-            clueCatalog[id].ClueVisibility = visibility;
+    // public void ClueVisibility(int id, bool visibility)
+    // {
+    //     if (id >= 0 && id < clueCatalog.Length) // If the clue id is out of bounds
+    //     {
+    //         // Toggle the visibility of the clue
+    //         clueCatalog[id].ClueVisibility = visibility;
 
-            // // Add the clue to the player's Inventory
-            // AddClueToInventory(int id, string name);
+    //         // // Add the clue to the player's Inventory
+    //         // AddClueToInventory(int id, string name);
 
-            // If the clue's visibility has been adjusted, log this message
-            Debug.Log($"CLUE UPDATED: Clue Name: {name}, ID: {id}, Visible: {visibility}");
-        }
-        else
-        {
-            Debug.LogWarning($"Clue at index {id} is either out of bounds or does not exist.");
-        }
-    }
+    //         // If the clue's visibility has been adjusted, log this message
+    //         Debug.Log($"CLUE UPDATED: Clue Name: {name}, ID: {id}, Visible: {visibility}");
+    //     }
+    //     else
+    //     {
+    //         Debug.LogWarning($"Clue at index {id} is either out of bounds or does not exist.");
+    //     }
+    // }
 
 }
 
