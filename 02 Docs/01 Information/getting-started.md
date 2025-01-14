@@ -5,11 +5,11 @@
 <div align="center">
 
 <h1 align="center">Murder At Supper</h1>
-<h2 align="center">Getting Started</h2>
+<h3 align="center">▸ Guide to Getting Started ◂</h3>
 
   <p align="center">
-    Welcome to the official GitHub repository for<br />
-    <i>Murder at Supper</i> by Epic Epic Games!
+    A guide for anyone contributing to the<br />
+    <i>Murder at Supper</i> (MaS) repository.
     <br />
   </p>
 </div>

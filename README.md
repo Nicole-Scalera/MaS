@@ -13,7 +13,7 @@
   </p>
 </div>
 
-> Please keep in mind that this README is currently UNDER CONSTRUCTION! To anyone reading this, I would highly recommend you check out the [Getting Started guide](https://github.com/Nicole-Scalera/MaS/blob/main/02%20Docs/01%20Information/getting-started.md) in the 02 Docs folder. -- Nikki, 1/14/25
+> Please keep in mind that this README is currently UNDER CONSTRUCTION! To anyone reading this, I would highly recommend you check out the [Guide to Getting Started](https://github.com/Nicole-Scalera/MaS/blob/main/02%20Docs/01%20Information/getting-started.md) in the 02 Docs folder. -- Nikki, 1/14/25
 
 <!-- TABLE OF CONTENTS -->
 <div style="font-size:16px;">
@@ -61,7 +61,7 @@ For an unguided reading experience, feel free to jump straight into the [02 Docs
 <div style="font-size:16px;">
 <h2 id="for-programmers">For Programmers</h2>
 
-Greetings to my fellow programmers! If you've never used GitHub before, you're definitely going to want to check out the [Getting Started guide](https://github.com/Nicole-Scalera/MaS/blob/main/02%20Docs/01%20Information/getting-started.md) in this repository.
+Greetings to my fellow programmers! If you've never used GitHub before, you're definitely going to want to check out the [Guide to Getting Started](https://github.com/Nicole-Scalera/MaS/blob/main/02%20Docs/01%20Information/getting-started.md) in this repository.
 
 The relevant sections you'll want to check out are written there as well, with a guide.
 
