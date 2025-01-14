@@ -1,11 +1,5 @@
 <a id="readme-top"></a>
 
-<!-- CSS -->
-
-<style>
-/* Insert any CSS here. */
-</style>
-
 <!-- TITLE -->
 <br />
 <div align="center">
