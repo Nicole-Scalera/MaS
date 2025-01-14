@@ -398,10 +398,12 @@ Forking is better for experimentation. But if you are planning on making somethi
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<br></br>
+
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* This README was authored by Nicole Scalera ([Atomic-Atlas](https://github.com/Atomic-Atlas)).
+* This README was authored by Nicole Scalera ([Nicole-Scalera](https://github.com/Nicole-Scalera)).
 * I started this README file thru a template from the popular repository, [Best-README-Template](https://github.com/othneildrew/Best-README-Template), by [othneildrew](https://github.com/othneildrew) on GitHub.
 * Many edits have been made to make it different and fit a sufficient README for *Murder at Supper* by Epic Epic Games.
 
