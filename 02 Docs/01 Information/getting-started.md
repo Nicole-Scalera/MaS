@@ -5,11 +5,11 @@
 <div align="center">
 
 <h1 align="center">Murder At Supper</h1>
-<h2 align="center">Getting Started</h2>
+<h3 align="center">▸ Guide to Getting Started ◂</h3>
 
   <p align="center">
-    Welcome to the official GitHub repository for<br />
-    <i>Murder at Supper</i> by Epic Epic Games!
+    A guide for anyone contributing to the<br />
+    <i>Murder at Supper</i> (MaS) repository.
     <br />
   </p>
 </div>
@@ -88,7 +88,7 @@ You may be asking yourself, *where should I even start?* Fear not! I've put toge
 
 <br></br>
 
-<!-- NAVIGATIONAL WIREFRAME -->
+<!-- NAVIGATION -->
 <div id="navigation" style="font-size:16px;">
 
 <h2>Navigation</h3>
@@ -104,10 +104,6 @@ Take a look at the following questions to navigate this README. Each choice will
       <a href="#familiar-with-github">Yes, I am very/pretty familiar</a>
     </li>
   </ol>
-  <p></p> 
-  <p>
-
-  </p>
 
 </div>
 
@@ -184,9 +180,7 @@ Take a look at the following questions to navigate this README. Each choice will
 
 A repository is what you are looking at right now! It's a central location where you can keep all of your files.
 
-<!-- <img src="[def]" width="500"></img> -->
-<!-- <img src="02 Docs\00 Assets\README\repository_def.png" width="500"></img> -->
-<img src="../00 Assets/README/repository_def.png" width="500"></img>
+<img src="../00 Assets/getting-started/repository_def.png" width="500"></img>
 
 In the case of GitHub, we can all contribute to this same repository to track and synchronize our work, even when we're apart.
 
@@ -225,7 +219,7 @@ Everytime you make changes to your repository, it is called a "commit."
 
 Commits can be thought of as a 'Save Game' function.
 
-<img src="../00 Assets/README/quicksave_meme.png" width="400"></img>
+<img src="../00 Assets/getting-started/quicksave_meme.png" width="400"></img>
 
 In the case of GitHub, they act as these little snapshots of your respository at specific times in its progression.
 
@@ -255,14 +249,14 @@ It's like a shared Google Docs file versus a personal Word Doc. The remote repos
 
 This workflow concept can be visualized through [this diagram](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control) from the official [Progit book](https://git-scm.com/book/en/v2).
 
-<img src="../00 Assets/README/centralized_ver_control_diagram.png" width="600"></img>
+<img src="../00 Assets/getting-started/centralized_ver_control_diagram.png" width="600"></img>
 
 However, this diagram *only* applies if you're making edits exclusively through the browser. If you want to make edits from your machine, take a look at the section below.
 
 ### What Does Local Mean?
 In contrast, "Local" surrounds the idea of everything that is locally available to *you* and only you. In other words, your personal machine. The [diagram](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control) below illustrates this concept.
 
-<img src="../00 Assets/README/distributed_ver_control_sys.png" width="500"></img>
+<img src="../00 Assets/getting-started/distributed_ver_control_sys.png" width="500"></img>
 
 As you can see, Computer A and Computer B both sync to the same remote repository, but have their own individual versions of the project. That way they can make changes and not corrupt the repository altogether. When you are ready, you can sync your local repository with the remote repository through <a href="#push-origin">pushing</a> and <a href="#fetch-origin">pulling</a>.
 
@@ -281,11 +275,11 @@ Preface: If you are a Developer and you plan on making changes to the 00 Unity P
 
 The people committing remotely will most likely be Writers and Artists. To commit remotely, visit [this repository](https://github.com/Atomic-Atlas/MaS) on [GitHub.com](https://github.com/) and upload files to the correct folders.
 
-<img src="../00 Assets/README/create_or_upload.png" width="600"></img>
+<img src="../00 Assets/getting-started/create_or_upload.png" width="600"></img>
 
 Be sure to enter the <a href="#title-and-description">title and description</a> of your change.
 
-<img src="../00 Assets/README/summary_box_remote.png" width="600"></img>
+<img src="../00 Assets/getting-started/summary_box_remote.png" width="600"></img>
 
 ### I Want to Upload Files From My Computer (Local)
 
@@ -295,14 +289,14 @@ It follows a very similar process, although it actively tracks your changes on y
 
 Here is a screenshot of my local repository for *Murder at Supper* open on the GitHub Desktop app.
 
-<img src="../00 Assets/README/ghd_interface.png" width="700"></img>
+<img src="../00 Assets/getting-started/ghd_interface.png" width="700"></img>
 
 In the upper-left corner, right beneath the repository name, you can find the changes you've made. All changes will be selected automatically, but you can uncheck whatever you'd like to not be uploaded to the repository.
 
 ### Fetch Origin
 Sometimes it's best to pull from the repository ("fetch origin") before you push anything into it, which can be done by clicking the "Fetch Origin" button.
 
-<img src="../00 Assets/README/fetch_origin.png" width="700"></img>
+<img src="../00 Assets/getting-started/fetch_origin.png" width="700"></img>
 
 This takes in any new changes from the remote repository and adds them to your local repo.
 
@@ -311,7 +305,7 @@ Like the last method, you will be prompted to create a <a href="#title-and-descr
 
 If you are confident on these edits, and are ready to submit them to the main branch of the repository, you can click "Push Origin."
 
-<img src="../00 Assets/README/push_origin.png" width="700"></img>
+<img src="../00 Assets/getting-started/push_origin.png" width="700"></img>
 
 This command will sync your local and remote copies together.
 
