@@ -88,7 +88,7 @@ You may be asking yourself, *where should I even start?* Fear not! I've put toge
 
 <br></br>
 
-<!-- NAVIGATIONAL WIREFRAME -->
+<!-- NAVIGATION -->
 <div id="navigation" style="font-size:16px;">
 
 <h2>Navigation</h3>
@@ -104,10 +104,6 @@ Take a look at the following questions to navigate this README. Each choice will
       <a href="#familiar-with-github">Yes, I am very/pretty familiar</a>
     </li>
   </ol>
-  <p></p> 
-  <p>
-
-  </p>
 
 </div>
 
@@ -184,8 +180,6 @@ Take a look at the following questions to navigate this README. Each choice will
 
 A repository is what you are looking at right now! It's a central location where you can keep all of your files.
 
-<!-- <img src="[def]" width="500"></img> -->
-<!-- <img src="02 Docs\00 Assets\README\repository_def.png" width="500"></img> -->
 <img src="../00 Assets/README/repository_def.png" width="500"></img>
 
 In the case of GitHub, we can all contribute to this same repository to track and synchronize our work, even when we're apart.
