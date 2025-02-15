@@ -71,3 +71,6 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 00 Unity Proj/.vscode/settings.json
+
+# Ignore Shaderlab files
+*.shader
